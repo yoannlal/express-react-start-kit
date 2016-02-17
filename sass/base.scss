@@ -1,0 +1,23 @@
+@font-face {
+    font-family: ...;
+    //src: url('../fonts/.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$white-color: #ECF0F1;
+$grey-color: #d5d2d3;
+//$colors: ...;
+
+
+html, body{
+
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    font-size: 16px;
+    color: $grey-color;
+    background-color: $white-color;
+}
