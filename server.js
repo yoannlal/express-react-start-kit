@@ -94,7 +94,7 @@ var router = express.Router();
 // ES6 with Babel
 
 app.get('/app.js', 
-        browserify(__dirname + '/client/main.js', {
+        browserify(__dirname + '/client/app.js', {
           transform: [babelify.configure({
             presets: ["es2015", "react"]
           })]
