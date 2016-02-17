@@ -5,10 +5,7 @@ const Home = React.createClass({
   render() {
     return (
         <div>
-          <ul role="nav">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-          </ul>
+          <h1> Home </h1>
         </div>
     );
   }

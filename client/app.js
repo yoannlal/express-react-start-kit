@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import history from './scripts/history';
 import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 
 //===================MAIN DIV===================
@@ -13,7 +12,10 @@ const App = React.createClass({
 
     return (
         <div id='container'>
-          <Nav />
+          <ul role="nav">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+          </ul>
           {React.cloneElement(this.props.children)}
         </div>
     );
@@ -22,14 +24,14 @@ const App = React.createClass({
 
 //===================IMPORT ROUTES===================
 
-import About from './components/Home';
+import Home from './components/Home';
 import About from './components/About';
 
 //=================REACT ROUTER ROUTES================
 
 render((
   <Router history={browserHistory}>
-    <Route path="/" component={Main}>
+    <Route path="/" component={App}>
       <IndexRoute component={Home}/>
       <Route path="/About" component={About} />
     </Route>

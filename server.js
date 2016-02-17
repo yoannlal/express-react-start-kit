@@ -7,13 +7,10 @@ var express = require('express'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
-    session = require('express-session'),
     mongoose = require('mongoose');
 
-    var sass = require('node-sass-middleware');
-
-    var React = require('react');
-    var Router = require('react-router');
+var sass = require('node-sass-middleware');
+var path = require('path');
 
 
 var app = express();
@@ -69,8 +66,9 @@ mongoose.connection.on('disconnected', function () {
 app.use(
     sass({
         src: __dirname + '/sass', //where the sass files are
-        dest: __dirname + '/public', //where css should go
-        debug: true
+        dest: __dirname + '/public/css', //where css should go
+        debug: true,
+        prefix:  '/css'
     })
 );
 
@@ -93,7 +91,7 @@ var router = express.Router();
 // Browserify lead the app to the single page js file
 // ES6 with Babel
 
-app.get('/app.js', 
+app.get('/app.js',
         browserify(__dirname + '/client/app.js', {
           transform: [babelify.configure({
             presets: ["es2015", "react"]
@@ -112,4 +110,3 @@ app.get('*', function(req, res){
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
-
