@@ -5,22 +5,6 @@ import { render } from 'react-dom';
 import history from './scripts/history';
 import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 
-//===================NAV===================
-
-const Nav = React.createClass({
-
-  render() {
-    return (
-        <div>
-          <ul role="nav">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/repos">About</Link></li>
-        </ul>
-        </div>
-    );
-  }
-});
-
 //===================MAIN DIV===================
 
 const App = React.createClass({
