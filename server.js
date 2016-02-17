@@ -40,7 +40,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 
 //===========METHODE OVERRIDE=====================
 
-//app.use(methodOverride('X-HTTP-Method-Override'));
+app.use(methodOverride('X-HTTP-Method-Override'));
 
 //===========MONGO DB=====================
 
