@@ -48,9 +48,21 @@ app.use(bodyParser.json({limit: '50mb'}));
 
 /*const dbURI = '...';
 mongoose.connect(dbURI);
-mongoose.connection.on('error', function() {
-  console.info('Error: Could not connect to MongoDB');
-});*/
+mongoose.connection.on('connected', function () {
+  console.log('Mongoose default connection open to ' + dbURI);
+  console.log(mongoose.connection.readyState);
+});
+
+// If the connection throws an error
+mongoose.connection.on('error',function (err) {
+  console.log('Mongoose default connection error: ' + err);
+});
+
+// When the connection is disconnected
+mongoose.connection.on('disconnected', function () {
+  console.log('Mongoose default connection disconnected');
+});
+*/
 
 //===========SASS IMPLEMENTATION=====================
 
