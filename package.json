@@ -1,0 +1,37 @@
+{
+  "name": « yoannlallement »,
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babelify": "^7.2.0",
+    "body-parser": "~1.13.2",
+    "browserify-middleware": "^7.0.0",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "express-session": "^1.12.1",
+    "method-override": "^2.2.0",
+    "moment": "^2.11.0",
+    "mongodb": "^2.0.49",
+    "mongoose": "^4.2.8",
+    "morgan": "~1.6.1",
+    "node-sass": "^3.4.2",
+    "node-sass-middleware": "^0.9.7",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.0",
+    "react-router": "^2.0.0-rc4",
+    "webpack": "^1.12.9"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "browserify": "^12.0.1",
+    "nodemon": "^1.8.1",
+    "watchify": "^3.6.0"
+  }
+}
